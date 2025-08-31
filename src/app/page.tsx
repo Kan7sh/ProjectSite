@@ -2,6 +2,7 @@ import { Anton } from "next/font/google";
 import { Projects } from "@/lib/projects";
 import { Link, SquareArrowOutUpRight } from "lucide-react";
 import Image from "next/image";
+import logo from "@/assets/logo_white.png";
 
 const anton = Anton({
   weight: "400",
@@ -18,6 +19,15 @@ export default function Home() {
             "radial-gradient(circle at 70% 100%, #fabb00,#fab300,#fa9a00,#fa7900, #fa5700 , #fa3e00, #fa1500, #fa0000, #d20000, #ad0000, #810000, #610000, #3b0000, #190000, #140000, #000000, #000000, #000000)",
         }}
       >
+        <a href="https://kanish.in" target="_blank">
+          <Image
+            src={logo}
+            alt="Top Logo"
+            width={35}
+            height={35}
+            className="absolute top-4 left-1/2 -translate-x-1/2"
+          />
+        </a>
         <div
           className={`${anton.className} text-5xl text-white pb-2 lg:pl-[22.5rem]`}
         >
@@ -26,7 +36,6 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col w-full items-center bg-black">
-        {/* Project List */}
         <div
           id="project-list"
           className="font-mono flex flex-col gap-2.5 border-neutral-700 border p-18 w-full max-w-4xl"
@@ -40,7 +49,7 @@ export default function Home() {
                 <span>{index + 1}.</span>
                 <a
                   href={`#project-${index}`}
-                  className="underline hover:text-amber-600"
+                  className="underline hover:text-orange-600"
                 >
                   {project.name}
                 </a>
@@ -49,7 +58,7 @@ export default function Home() {
                 href={project.apkLink ?? project.projectLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-amber-600"
+                className="hover:text-orange-600"
               >
                 <Link size={15} />
               </a>
@@ -72,7 +81,7 @@ export default function Home() {
                   href={project.apkLink ?? project.projectLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-amber-600"
+                  className="hover:text-orange-600"
                 >
                   <div className="flex gap-2 items-center">
                     <div>{project.apkLink ? "APK" : "Visit"}</div>
