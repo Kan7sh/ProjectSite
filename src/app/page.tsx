@@ -29,7 +29,7 @@ export default function Home() {
           />
         </a>
         <div
-          className={`${anton.className} text-5xl text-white pb-2 lg:pl-[22.5rem]`}
+          className={`${anton.className} text-5xl text-white pb-2 pl-5 lg:pl-[22.5rem]`}
         >
           PROJECTS
         </div>
@@ -38,7 +38,7 @@ export default function Home() {
       <div className="flex flex-col w-full items-center bg-black">
         <div
           id="project-list"
-          className="font-mono flex flex-col gap-2.5 border-neutral-700 border p-18 w-full max-w-4xl"
+          className="font-mono flex flex-col gap-2.5 border-neutral-700 border p-5 lg:p-18 w-full max-w-4xl"
         >
           {Projects.map((project, index) => (
             <div
@@ -66,7 +66,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="font-mono flex flex-col gap-2.5 border-neutral-700 border p-18 w-full max-w-4xl">
+        <div className="font-mono flex flex-col gap-2.5 border-neutral-700 border p-5 lg:p-18 w-full max-w-4xl">
           {Projects.map((project, index) => (
             <div
               key={project.name}
