@@ -74,7 +74,7 @@ export default function Home() {
               className="flex flex-col scroll-mt-20"
             >
               <div className="flex justify-between">
-                <div className={`${anton.className} text-4xl`}>
+                <div className={`${anton.className}  text-2xl lg:text-4xl`}>
                   {project.name}
                 </div>
                 <a
