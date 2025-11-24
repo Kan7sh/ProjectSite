@@ -7,6 +7,8 @@ import aialarmImg from "@/assets/aialarm.jpg";
 import imageGeniusImg from "@/assets/imagegenius.jpg";
 import stockmateImg from "@/assets/stockmate.jpg";
 import seatingPlanImg from "@/assets/seatingplan.jpg";
+import layerFlowImg from "@/assets/layerflow.png";
+import ttoflImg from "@/assets/ttofl.png";
 
 import type { StaticImageData } from "next/image";
 
@@ -19,6 +21,13 @@ interface Project {
 }
 
 export const Projects: Project[] = [
+  {
+    name: "Layer Flow",
+    projectLink: "https://layerflow.kanish.in/",
+    description:
+      "An open-source, AI-powered image editor designed for creators who want speed, control, and flexibility. It offers a full layer-based workspace where you can add, style, and manipulate text and image layers with precision. A built-in LangChain AI assistant helps generate visuals, remove backgrounds, create layout-ready text, and automate repetitive edits. With its modern UI and responsive experience, it’s built for professional workflows, rapid prototyping, and creative experimentation",
+    localImagePathOfProject: layerFlowImg,
+  },
   {
     name: "Code Compass",
     projectLink: "https://codecompass.kanish.in/",
@@ -39,6 +48,13 @@ export const Projects: Project[] = [
     description:
       "I created an open-source AI-powered emailer designed to simplify and automate the job application process. The platform allows users to add multiple sender and recipient email addresses, craft custom prompts, and generate personalized emails using Ollama from Hugging Face integrated with shadcn for a modern UI. Users can include details such as education, work experience, skills, and projects directly in the email, ensuring tailored applications for each opportunity. The app also provides both an “Easy Send” option for single emails and a “Send All” feature for bulk applications, making the process faster and more efficient. This tool empowers job seekers to manage and scale their applications seamlessly while maintaining personalization.",
     localImagePathOfProject: aicoldmailerImg,
+  },
+  {
+    name: "TTOFL Website",
+    projectLink: "https://ttofl.com",
+    description:
+      "I created a fully functional Website for a Company in Next.js, having various pages like contact, products, career, contact us, with modern edge UI and full working functionaly of careers form and ontact us form",
+    localImagePathOfProject: ttoflImg,
   },
   {
     name: "Portfolio",
