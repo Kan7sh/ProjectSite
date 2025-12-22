@@ -9,6 +9,8 @@ import stockmateImg from "@/assets/stockmate.jpg";
 import seatingPlanImg from "@/assets/seatingplan.jpg";
 import layerFlowImg from "@/assets/layerflow.png";
 import ttoflImg from "@/assets/ttofl.png";
+import societyCarsImg from "@/assets/societycars.png";
+import societyCarsBusinessImg from "@/assets/societycarsbusiness.png";
 
 import type { StaticImageData } from "next/image";
 
@@ -34,6 +36,22 @@ export const Projects: Project[] = [
     description:
       "Code Compass is an AI-powered pull request review system designed to streamline the code review process. Users can connect their GitHub account, select a repository and branch to monitor, and let the system automatically track new pull requests. Whenever a PR is raised, Code Compass leverages an AI model from Hugging Face to analyze the code changes and generate intelligent review comments, which are then published directly on the pull request. This helps developers receive quick, consistent, and constructive feedback, reducing review bottlenecks and improving overall code quality.",
     localImagePathOfProject: codecompassImg,
+  },
+  {
+    name: "Society Cars",
+    projectLink:
+      "https://play.google.com/store/apps/details?id=com.ttofl.society_cars",
+    description:
+      "Society Cars is your all-in-one automobile service companion designed to make vehicle care effortless and reliable. Whether you need premium daily car cleaning, a quick pit stop service, or professional car repairs, the app connects you with trusted service partners instantly. With a smooth and intuitive interface, Society Cars ensures that every service—from basic maintenance to emergency needs—is just a tap away.",
+    localImagePathOfProject: societyCarsImg,
+  },
+  {
+    name: "Society Cars Business",
+    projectLink:
+      "https://play.google.com/store/apps/details?id=com.ttofl.society_cars_business",
+    description:
+      "Society Cars Business app is designed exclusively for Vendors, Society Admins, and Cleaners to efficiently manage all operations within the Society Cars ecosystem. It provides an organized platform to handle cleaning schedules, track daily tasks, manage cleaner assignments, and oversee service delivery across the society. With real-time updates and an easy-to-use dashboard, admins and vendors can ensure everything runs smoothly and on time.",
+    localImagePathOfProject: societyCarsBusinessImg,
   },
   {
     name: "The Podcast Space",
