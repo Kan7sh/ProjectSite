@@ -11,6 +11,7 @@ import layerFlowImg from "@/assets/layerflow.png";
 import ttoflImg from "@/assets/ttofl.png";
 import societyCarsImg from "@/assets/societycars.png";
 import societyCarsBusinessImg from "@/assets/societycarsbusiness.png";
+import devPilot from "@/assets/devpilot.png";
 
 import type { StaticImageData } from "next/image";
 
@@ -59,6 +60,13 @@ export const Projects: Project[] = [
     description:
       "This project is a real-time podcasting web application built with Next.js, designed to provide seamless audio collaboration. Users can create or join rooms and communicate in real time through WebRTC and WebSocket, ensuring low-latency interactions. To maintain high audio fidelity, the app supports local recordings, enabling lossless audio quality for playback and storage. Authentication is handled via OAuth, offering secure and hassle-free user access, while collaborative features make it easy for multiple participants to manage and interact within a room. For scalability and reliability, the application is containerized with Docker and deployed on AWS EC2, ensuring a robust infrastructure that can handle dynamic user demands.",
     localImagePathOfProject: thepodcastspaceImg,
+  },
+  {
+    name: "Dev Pilot AI Agent",
+    projectLink: "https://github.com/Kan7sh/DevPilot-AI-Agent",
+    description:
+      "Crafted a terminal-based AI coding agent with model switching, MCP support, built-in tools like read, write, grep. Developed session, context, and hooks management to enable persistent workflows.",
+    localImagePathOfProject: devPilot,
   },
   {
     name: "AI Automatic Mailer",
