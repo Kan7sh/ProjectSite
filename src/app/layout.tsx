@@ -1,43 +1,28 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Anton, Gilda_Display } from "next/font/google";
 
-const anton = Anton({
-  variable: "--font-anton",
+import { Jersey_10, Jost } from "next/font/google";
+
+const heading = Jersey_10({
+  subsets: ["latin"],
+  variable: "--font-heading",
   weight: "400",
-  subsets: ["latin"],
 });
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const body = Jost({
   subsets: ["latin"],
+  variable: "--font-body",
+  weight: ["300", "400", "500", "600"],
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "Kanish's Projects",
-  icons: {
-    icon: "/logo_white.png",
-  },
-};
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistMono.variable} ${geistSans.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="en" className={`${heading.variable} ${body.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }

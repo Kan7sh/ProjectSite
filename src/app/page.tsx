@@ -1,13 +1,8 @@
-import { Anton } from "next/font/google";
 import { Projects } from "@/lib/projects";
 import { Link, SquareArrowOutUpRight } from "lucide-react";
 import Image from "next/image";
 import logo from "@/assets/logo_white.png";
 
-const anton = Anton({
-  weight: "400",
-  subsets: ["latin"],
-});
 
 export default function Home() {
   return (
@@ -16,7 +11,7 @@ export default function Home() {
         className="h-[40%] w-full flex items-end"
         style={{
           background:
-            "radial-gradient(circle at 70% 100%, #fabb00,#fab300,#fa9a00,#fa7900, #fa5700 , #fa3e00, #fa1500, #fa0000, #d20000, #ad0000, #810000, #610000, #3b0000, #190000, #140000, #000000, #000000, #000000)",
+          "linear-gradient(155deg, #000000, #00163b 75%)",
         }}
       >
         <a href="https://kanish.in" target="_blank">
@@ -29,7 +24,7 @@ export default function Home() {
           />
         </a>
         <div
-          className={`${anton.className} text-5xl text-white pb-2 pl-5 lg:pl-[22.5rem]`}
+          className={`font-heading text-7xl text-white pb-2 pl-5 lg:pl-[22.5rem]`}
         >
           PROJECTS
         </div>
@@ -43,7 +38,7 @@ export default function Home() {
           {Projects.map((project, index) => (
             <div
               key={project.name}
-              className="flex flex-row justify-between w-full text-white"
+              className="flex flex-row justify-between w-full text-white font-body"
             >
               <div className="flex gap-2">
                 <span>{index + 1}.</span>
@@ -71,10 +66,10 @@ export default function Home() {
             <div
               key={project.name}
               id={`project-${index}`}
-              className="flex flex-col scroll-mt-20"
+              className="flex flex-col scroll-mt-20 font-body"
             >
               <div className="flex justify-between">
-                <div className={`${anton.className}  text-2xl lg:text-4xl`}>
+                <div className={`font-heading text-3xl lg:text-5xl`}>
                   {project.name}
                 </div>
                 <a
