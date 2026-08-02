@@ -44,7 +44,7 @@ export default function Home() {
                 <span>{index + 1}.</span>
                 <a
                   href={`#project-${index}`}
-                  className="underline hover:text-orange-600"
+                  className="underline hover:text-yellow-500"
                 >
                   {project.name}
                 </a>
@@ -53,7 +53,7 @@ export default function Home() {
                 href={project.apkLink ?? project.projectLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-orange-600"
+                className="hover:text-yellow-500"
               >
                 <Link size={15} />
               </a>
@@ -76,7 +76,7 @@ export default function Home() {
                   href={project.apkLink ?? project.projectLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-orange-600"
+                  className="hover:text-yellow-500"
                 >
                   <div className="flex gap-2 items-center">
                     <div>{project.apkLink ? "APK" : "Visit"}</div>
