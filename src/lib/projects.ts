@@ -26,14 +26,14 @@ interface Project {
 export const Projects: Project[] = [
   {
     name: "Layer Flow",
-    projectLink: "https://layerflow.kanish.in/",
+    projectLink: "https://layerflow.kanishc.in/",
     description:
       "An open-source, AI-powered image editor designed for creators who want speed, control, and flexibility. It offers a full layer-based workspace where you can add, style, and manipulate text and image layers with precision. A built-in LangChain AI assistant helps generate visuals, remove backgrounds, create layout-ready text, and automate repetitive edits. With its modern UI and responsive experience, it’s built for professional workflows, rapid prototyping, and creative experimentation",
     localImagePathOfProject: layerFlowImg,
   },
   {
     name: "Code Compass",
-    projectLink: "https://codecompass.kanish.in/",
+    projectLink: "https://codecompass.kanishc.in/",
     description:
       "Code Compass is an AI-powered pull request review system designed to streamline the code review process. Users can connect their GitHub account, select a repository and branch to monitor, and let the system automatically track new pull requests. Whenever a PR is raised, Code Compass leverages an AI model from Hugging Face to analyze the code changes and generate intelligent review comments, which are then published directly on the pull request. This helps developers receive quick, consistent, and constructive feedback, reducing review bottlenecks and improving overall code quality.",
     localImagePathOfProject: codecompassImg,
@@ -84,7 +84,7 @@ export const Projects: Project[] = [
   },
   {
     name: "Portfolio",
-    projectLink: "https://kanish.in/",
+    projectLink: "https://kanishc.in/",
     description:
       "I built a personal portfolio website using React, featuring an extremely polished and visually appealing UI that pushed my creative and technical limits. The site showcases my projects, experiences, and personal background, serving as a professional platform to represent my skills and work in an engaging way.",
     localImagePathOfProject: portfolioImg,

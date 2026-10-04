@@ -1,34 +1,116 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-code);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), sans-serif;
 }
 
 .font-heading {
   font-family: var(--font-heading);
 }
 
+.font-display {
+  font-family: var(--font-display);
+}
+
 .font-body {
   font-family: var(--font-body);
+}
+
+.header-aurora {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.aurora-ribbon {
+  position: absolute;
+  width: 85%;
+  height: 75%;
+  border-radius: 50%;
+  filter: blur(42px);
+  mix-blend-mode: screen;
+  opacity: 0.26;
+  will-change: transform;
+}
+
+.aurora-ribbon-one {
+  top: -52%;
+  left: -12%;
+  background: linear-gradient(105deg, transparent 15%, rgb(255 255 255 / 75%) 48%, rgb(222 139 155 / 50%) 58%, transparent 82%);
+  transform: rotate(-12deg);
+  animation: aurora-flow-one 24s ease-in-out infinite alternate;
+}
+
+.aurora-ribbon-two {
+  right: -20%;
+  bottom: -62%;
+  width: 78%;
+  height: 90%;
+  background: linear-gradient(115deg, transparent 18%, rgb(255 255 255 / 60%) 48%, rgb(211 98 124 / 60%) 58%, transparent 83%);
+  opacity: 0.2;
+  transform: rotate(-18deg);
+  animation: aurora-flow-two 30s ease-in-out infinite alternate;
+}
+
+.aurora-ribbon-three {
+  top: 8%;
+  left: 38%;
+  width: 72%;
+  height: 45%;
+  background: linear-gradient(100deg, transparent 20%, rgb(255 241 244 / 58%) 50%, transparent 78%);
+  opacity: 0.18;
+  filter: blur(30px);
+  transform: rotate(14deg);
+  animation: aurora-flow-three 27s ease-in-out infinite alternate;
+}
+
+@keyframes aurora-flow-one {
+  from {
+    transform: translate(-5%, -7%) rotate(-12deg) scale(0.95);
+  }
+
+  to {
+    transform: translate(12%, 14%) rotate(-4deg) scale(1.12);
+  }
+}
+
+@keyframes aurora-flow-two {
+  from {
+    transform: translate(5%, 8%) rotate(-18deg) scale(1);
+  }
+
+  to {
+    transform: translate(-12%, -10%) rotate(-8deg) scale(1.12);
+  }
+}
+
+@keyframes aurora-flow-three {
+  from {
+    transform: translate(-8%, 5%) rotate(14deg);
+  }
+
+  to {
+    transform: translate(10%, -8%) rotate(5deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora-ribbon {
+    animation: none;
+  }
 }
